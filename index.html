@@ -15,6 +15,29 @@
     <fieldset>
       <legend class="form-title">入力フォーム</legend>
       <progress max="100" value="50">75/100</progress>
+      <style>
+        .form-group {
+          position: relative;
+          padding-top: 1.5rem;
+        }
+
+        .label {
+          position: absolute;
+          top: 0;
+          opacity: 1;
+          transform: translateY(0);
+          transition: all .2s ease-out;
+        }
+
+        .input:placeholder-shown + .label {
+          opacity: 0;
+          transform: translateY(1rem);
+        }
+      </style>
+      <div class="form-group">
+        <input class="input" type="text" id="dynamic-label-input" placeholder="Enter some text">
+        <label class="label" for="dynamic-label-input">Enter some text</label>
+      </div>
       <div class="l-table">
         <label class="l-form-input-title form-input-title" for="move-date">引越し日時</label>
         <input class="l-form-input-body form-input-body form-input" type="date" min="2013-06-01" max="2013-08-31" id="move-date">

@@ -29,4 +29,22 @@
     font-size: 1.7vw;
     padding: 1%;
   }
+
+  .form-group {
+    position: relative;
+
+    & > label {
+      position: absolute;
+      top: 0;
+      font-size: var(--font-size-small);
+      opacity: 1;
+      transform: translateY(0);
+      transition: all .2s ease-out;
+    }
+
+    & > .form-input {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+  }
 }
