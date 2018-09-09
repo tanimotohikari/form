@@ -6,6 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "rules": {
+    "semi": [
+      "error",
+      "always"
+    ],
+    "quotes": [
+      "error",
+      "double"
+    ]
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -14,7 +24,7 @@
     "gulp-clean-css": "^3.4.1",
     "gulp-combine-media-queries": "^0.2.0",
     "gulp-concat": "^2.6.1",
-    "gulp-eslint": "^4.0.0",
+    "gulp-eslint": "^4.0.2",
     "gulp-plumber": "^1.2.0",
     "gulp-sass": "^3.2.1",
     "gulp-scss-lint": "^0.5.0",

@@ -173,3 +173,9 @@ li {
 
 .text-subtitle {
   background: linear-gradient(transparent 70%, #a5d3c8 70%); }
+
+.is-error {
+  color: red; }
+
+.is-success {
+  color: green; }

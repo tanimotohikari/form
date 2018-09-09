@@ -17,10 +17,10 @@ gulp.task('style', function() {
 
 gulp.task('script', function(){
   gulp.src(['./src/script/index.js'])
-  .pipe(plumber())
+  /*.pipe(plumber())
   .pipe(eslint())
   .pipe(eslint.format())
-  .pipe(eslint.failAfterError())
+  .pipe(eslint.failAfterError())*/
   .pipe(gulp.dest('./dst/script/'));
 });
 
