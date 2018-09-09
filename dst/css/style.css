@@ -1,0 +1,175 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont 'Helvetica Neue', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', sans-serif;
+  background-color: #f4f4f4; }
+
+li {
+  list-style: none; }
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.l-full {
+  width: 100%; }
+
+.l-half {
+  width: 50%; }
+
+.l-section {
+  width: 80%;
+  margin: 0 auto; }
+
+.l-vertical-align {
+  vertical-align: middle; }
+
+.l-align-center {
+  text-align: center; }
+
+.l-align-right {
+  text-align: right; }
+
+.l-align-left {
+  text-align: left; }
+
+.l-left-small {
+  margin-left: 5px; }
+
+.l-left {
+  margin-left: 10px; }
+
+.l-large {
+  margin-left: 20px; }
+
+.l-xlarge {
+  margin-left: 30px; }
+
+.l-bottom-xsmall {
+  margin-bottom: 5px; }
+
+.l-bottom-small {
+  margin-bottom: 10px; }
+
+.l-bottom {
+  margin-bottom: 20px; }
+
+.l-float-left {
+  float: left; }
+
+.l-flex {
+  display: -ms-flexbox;
+  display: flex; }
+  .l-flex.wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .l-flex.equality {
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+
+.l-line-height {
+  line-height: 1.2; }
+
+.l-table {
+  display: table; }
+  .l-table > * {
+    display: table-cell; }
+
+.l-row:after {
+  content: '';
+  clear: both;
+  display: block; }
+
+.l-row > * {
+  float: left; }
+
+/*layout*/
+.l-form-input-title {
+  width: 130px; }
+
+.l-form-input-body {
+  width: 80%; }
+
+.l-form-input-name {
+  width: 40%; }
+
+.form .form-title {
+  position: relative;
+  display: inline-block;
+  padding: 0 55px; }
+  .form .form-title:before, .form .form-title:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 45px;
+    height: 1px;
+    background-color: #000; }
+  .form .form-title:before {
+    left: 0; }
+  .form .form-title:after {
+    right: 0; }
+
+.form .form-input {
+  font-size: 1.7vw;
+  padding: 1%; }
+
+.text-title {
+  position: relative;
+  padding: 0.5em;
+  background-color: #a6d3c8;
+  color: #fff;
+  font-size: 2vw; }
+
+.text-title:before {
+  /*
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px rgb(149, 158, 155);*/ }
+
+.text-subtitle {
+  background: linear-gradient(transparent 70%, #a5d3c8 70%); }

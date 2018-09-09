@@ -1,0 +1,32 @@
+.form {
+
+  .form-title {
+    position: relative;
+    display: inline-block;
+    padding: 0 55px;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      display: inline-block;
+      width: 45px;
+      height: 1px;
+      background-color: #000;
+    }
+
+    &:before {
+      left: 0;
+    }
+
+    &:after {
+      right: 0;
+    }
+  }
+
+  .form-input {
+    font-size: 1.7vw;
+    padding: 1%;
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="dst/css/style.css">
+  <script src="dst/script/index.js"></script>
+  <title>form</title>
+</head>
+<body>
+<h1 class="l-bottom text-title">formコーディング</h1>
+<section class="l-section">
+  <form class="form" action="" method="">
+    <fieldset>
+      <legend class="form-title">入力フォーム</legend>
+      <progress max="100" value="50">75/100</progress>
+      <div class="l-table">
+        <label class="l-form-input-title form-input-title" for="move-date">引越し日時</label>
+        <input class="l-form-input-body form-input-body form-input" type="date" min="2013-06-01" max="2013-08-31" id="move-date">
+      </div>
+      <div class="l-table">
+        <p class="l-form-input-title form-input-title">お名前</p>
+        <div class="l-form-input-body form-input-body">
+          <label for="last-name">姓</label>
+          <input class="l-form-input-name form-input" type="text" id="last-name" name="">
+          <label for="first-name">名</label>
+          <input class="l-form-input-name form-input" type="text" id="first-name" name="">
+        </div>
+      </div>
+      <div class="l-table">
+        <p class="l-form-input-title form-input-title">ふりがな</p>
+        <div class="l-form-input-body form-input-body">
+          <label for="last-name-phonetic">姓</label>
+          <input class="l-form-input-name form-input" type="text" id="last-name-phonetic" name="">
+          <label for="first-name-phonetic">名</label>
+          <input class="l-form-input-name form-input" type="text" id="first-name-phonetic" name="">
+        </div>
+      </div>
+      <div class="l-table">
+        <label class="l-form-input-title form-input-title" for="tel">電話番号</label>
+        <div class="l-form-input-body form-input-body">
+          <input class="l-full form-input" type="tel" id="tel" name="">
+        </div>
+      </div>
+      <div class="l-table">
+        <label class="l-form-input-title form-input-title" for="email">メールアドレス</label>
+        <div class="l-form-input-body form-input-body">
+          <input class="l-full form-input" type="email" id="email" name="">
+        </div>
+      </div>
+      <div class="l-table">
+        <label class="l-form-input-title form-input-title" for="move-person">引越し人数</label>
+        <div class="l-form-input-body form-input-body">
+          <select id="move-person">
+            <option value="1">１人</option>
+            <option value="2">２人</option>
+            <option value="3">３人</option>
+            <option value="4">４人</option>
+            <option value="5">５人以上</option>
+          </select>
+        </div>
+      </div>
+      <div class="l-table">
+        <p class="l-form-input-title form-input-title">引越し理由</p>
+        <div class="l-form-input-body form-input-body">
+          <label for="transfer"><input id="transfer" type="radio" value="1" name="move-reason" checked>転勤</label>
+          <label for="employment"><input id="employment" type="radio" value="2" name="move-reason">就職</label>
+          <label for="change-jobs"><input id="change-jobs" type="radio" value="3" name="move-reason">転職</label>
+          <label for="marriage"><input id="marriage" type="radio" value="4" name="move-reason">結婚</label>
+        </div>
+      </div>
+      <button type="submit">データ送信</button>
+    </fieldset>
+  </form>
+</section>
+</body>
+</html>

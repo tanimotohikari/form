@@ -1,0 +1,97 @@
+.l-full {
+  width: 100%;
+}
+
+.l-half {
+  width: 50%;
+}
+
+.l-section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.l-vertical-align {
+  vertical-align: middle;
+}
+
+.l-align-center {
+  text-align: center;
+}
+
+.l-align-right {
+  text-align: right;
+}
+
+.l-align-left {
+  text-align: left;
+}
+
+.l-left-small {
+  margin-left: 5px;
+}
+
+.l-left {
+  margin-left: 10px;
+}
+
+.l-large {
+  margin-left: 20px;
+}
+
+.l-xlarge {
+  margin-left: 30px;
+}
+
+.l-bottom-xsmall {
+  margin-bottom: 5px;
+}
+
+.l-bottom-small {
+  margin-bottom: 10px;
+}
+
+.l-bottom {
+  margin-bottom: 20px;
+}
+
+.l-float-left {
+  float: left;
+}
+
+.l-flex {
+  display: flex;
+
+  &.wrap {//アイテムを1列に並べる
+    flex-wrap: wrap;
+  }
+
+  &.equality {//アイテムを均等に配置する
+    justify-content: space-between;
+  }
+}
+
+.l-line-height {
+  line-height: 1.2;
+}
+
+.l-table {
+  display: table;
+
+  & > * {
+    display: table-cell;
+  }
+}
+
+.l-row {
+
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+
+  & > * {
+    float: left;
+  }
+}
