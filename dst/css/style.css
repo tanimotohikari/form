@@ -128,7 +128,9 @@ li {
   width: 130px; }
 
 .l-form-input-body {
-  width: 80%; }
+  width: 80%;
+  position: relative;
+  padding-top: 1.5rem; }
 
 .l-form-input-name {
   width: 40%; }
@@ -151,21 +153,23 @@ li {
     right: 0; }
 
 .form .form-input {
-  font-size: 1.7vw;
+  font-size: 1.3vw;
   padding: 1%; }
-
-.form .form-group {
-  position: relative; }
-  .form .form-group > label {
-    position: absolute;
-    top: 0;
-    font-size: var(--font-size-small);
-    opacity: 1;
-    transform: translateY(0);
-    transition: all .2s ease-out; }
-  .form .form-group > .form-input {
+  .form .form-input:placeholder-shown + .form-label {
     opacity: 0;
     transform: translateY(1rem); }
+  .form .form-input:valid {
+    border: 1px solid green; }
+  .form .form-input:invalid {
+    border: 1px solid red; }
+
+.form .form-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all .2s ease-out; }
 
 .text-title {
   position: relative;

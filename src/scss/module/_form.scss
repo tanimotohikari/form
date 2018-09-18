@@ -26,25 +26,29 @@
   }
 
   .form-input {
-    font-size: 1.7vw;
+    font-size: 1.3vw;
     padding: 1%;
-  }
 
-  .form-group {
-    position: relative;
-
-    & > label {
-      position: absolute;
-      top: 0;
-      font-size: var(--font-size-small);
-      opacity: 1;
-      transform: translateY(0);
-      transition: all .2s ease-out;
-    }
-
-    & > .form-input {
+    &:placeholder-shown + .form-label {
       opacity: 0;
       transform: translateY(1rem);
     }
+
+    &:valid {
+      border: 1px solid green;
+    }
+
+    &:invalid {
+      border: 1px solid red;
+    }
+  }
+
+  .form-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all .2s ease-out;
   }
 }

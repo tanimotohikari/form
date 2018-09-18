@@ -1,10 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
+  var form = document.forms.mainForm;
   var lastName = document.getElementById('last-name');
   var firstName = document.getElementById('first-name');
   var lastNamePhonetic = document.getElementById('last-name-phonetic');
   var firstNamePhonetic = document.getElementById('first-name-phonetic');
   var tel = document.getElementById('tel');
   var email = document.getElementById('email');
+  var date = document.getElementById('move-date');
+
 
   function validateHandler(event) {
     this.classList.remove('is-error');

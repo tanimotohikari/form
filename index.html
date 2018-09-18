@@ -11,7 +11,7 @@
 <body>
 <h1 class="l-bottom text-title">formコーディング</h1>
 <section class="l-section">
-  <form class="form" action="" method="">
+  <form class="form" action="" method="" name="mainForm">
     <fieldset>
       <legend class="form-title">入力フォーム</legend>
       <progress max="100" value="50">75/100</progress>
@@ -21,60 +21,62 @@
           padding-top: 1.5rem;
         }
 
-        .label {
+        .form-group > .input-label {
           position: absolute;
           top: 0;
+          left: 0;
           opacity: 1;
           transform: translateY(0);
           transition: all .2s ease-out;
         }
 
-        .input:placeholder-shown + .label {
+        .form-group > .form-input:placeholder-shown + .input-label {
           opacity: 0;
           transform: translateY(1rem);
         }
       </style>
-      <div class="form-group">
-        <input class="input" type="text" id="dynamic-label-input" placeholder="Enter some text">
-        <label class="label" for="dynamic-label-input">Enter some text</label>
-      </div>
-      <div class="l-table">
+      <!-- <div class="form-group">
+        <input class="form-input" type="text" id="dynamic-label-input" placeholder="Enter some text">
+        <label class="input-label" for="dynamic-label-input">Enter some text</label>
+      </div> -->
+      <!-- <div class="l-table">
         <label class="l-form-input-title form-input-title" for="move-date">引越し日時</label>
-        <input class="l-form-input-body form-input-body form-input" type="date" min="2013-06-01" max="2013-08-31" id="move-date">
-      </div>
-      <div class="l-table">
+        <input class="l-form-input-body form-input" type="date" min="2013-06-01" max="2013-08-31" id="move-date">
+      </div> -->
+      <div class="l-table l-bottom">
         <p class="l-form-input-title form-input-title">お名前</p>
-        <div class="l-form-input-body form-input-body">
-          <label for="last-name">姓</label>
-          <input class="l-form-input-name form-input" type="text" id="last-name" name="" placeholder="引越し" required>
+        <div class="l-form-input-body">
+          <input class="l-form-input-name form-input" type="text" id="last-name" name="lastName" placeholder="お名前：姓) 引越し" required>
+          <label class="form-label" for="last-name">お名前：姓) 引越し</label>
           <label for="first-name">名</label>
-          <input class="l-form-input-name form-input" type="text" id="first-name" name="" placeholder="太郎" required>
+          <input class="l-form-input-name form-input" type="text" id="first-name" name="firstName" placeholder="太郎" required>
         </div>
       </div>
-      <div class="l-table">
+      <div class="l-table l-bottom">
         <p class="l-form-input-title form-input-title">ふりがな</p>
-        <div class="l-form-input-body form-input-body">
+        <div class="l-form-input-body">
           <label for="last-name-phonetic">姓</label>
           <input class="l-form-input-name form-input" type="text" id="last-name-phonetic" name="" placeholder="ひっこし" required>
           <label for="first-name-phonetic">名</label>
           <input class="l-form-input-name form-input" type="text" id="first-name-phonetic" name="" placeholder="たろう" required>
         </div>
       </div>
-      <div class="l-table">
+      <div class="l-table l-bottom">
         <label class="l-form-input-title form-input-title" for="tel">電話番号</label>
-        <div class="l-form-input-body form-input-body">
-          <input class="l-full form-input" type="tel" id="tel" name="" placeholder="01201231234" required>
+        <div class="l-form-input-body">
+          <input class="l-full form-input" type="tel" id="tel" name="" placeholder="電話番号) 01201231234" required>
+          <label class="input-label" for="dynamic-label-input">電話番号) 01201231234</label>
         </div>
       </div>
-      <div class="l-table">
+      <div class="l-table l-bottom">
         <label class="l-form-input-title form-input-title" for="email">メールアドレス</label>
-        <div class="l-form-input-body form-input-body">
+        <div class="l-form-input-body">
           <input class="l-full form-input" type="email" id="email" name="" placeholder="hogehoge@example.com" required>
         </div>
       </div>
-      <div class="l-table">
+      <div class="l-table l-bottom">
         <label class="l-form-input-title form-input-title" for="move-person">引越し人数</label>
-        <div class="l-form-input-body form-input-body">
+        <div class="l-form-input-body">
           <select id="move-person">
             <option value="1">１人</option>
             <option value="2">２人</option>
@@ -84,9 +86,9 @@
           </select>
         </div>
       </div>
-      <div class="l-table">
+      <div class="l-table l-bottom">
         <p class="l-form-input-title form-input-title">引越し理由</p>
-        <div class="l-form-input-body form-input-body">
+        <div class="l-form-input-body">
           <label for="transfer"><input id="transfer" type="radio" value="1" name="move-reason" checked>転勤</label>
           <label for="employment"><input id="employment" type="radio" value="2" name="move-reason">就職</label>
           <label for="change-jobs"><input id="change-jobs" type="radio" value="3" name="move-reason">転職</label>
