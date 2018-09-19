@@ -19,6 +19,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
+  //setCustomValidity() 値を検証した時に表示されるエラー文言を変更できる
+  email.addEventListener('input', function (event) {
+    if (email.validity.typeMismatch) {
+      email.setCustomValidity('メールアドレスを正しく入力してください');
+    } else {
+      email.setCustomValidity('メールアドレスは必須項目です');
+    }
+  });
+
   lastName.addEventListener('input', validateHandler);
   lastName.addEventListener('blur', validateHandler);
   firstName.addEventListener('input', validateHandler);
