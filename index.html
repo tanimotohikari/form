@@ -13,36 +13,8 @@
 <section class="l-section">
   <form class="form" action="" method="" name="mainForm">
     <fieldset>
-      <legend class="form-title">入力フォーム</legend>
-      <progress max="100" value="50">75/100</progress>
-      <style>
-        .form-group {
-          position: relative;
-          padding-top: 1.5rem;
-        }
-
-        .form-group > .input-label {
-          position: absolute;
-          top: 0;
-          left: 0;
-          opacity: 1;
-          transform: translateY(0);
-          transition: all .2s ease-out;
-        }
-
-        .form-group > .form-input:placeholder-shown + .input-label {
-          opacity: 0;
-          transform: translateY(1rem);
-        }
-      </style>
-      <!-- <div class="form-group">
-        <input class="form-input" type="text" id="dynamic-label-input" placeholder="Enter some text">
-        <label class="input-label" for="dynamic-label-input">Enter some text</label>
-      </div> -->
-      <!-- <div class="l-table">
-        <label class="l-form-input-title form-input-title" for="move-date">引越し日時</label>
-        <input class="l-form-input-body form-input" type="date" min="2013-06-01" max="2013-08-31" id="move-date">
-      </div> -->
+      <legend class="l-bottom form-title">入力フォーム</legend>
+      <progress id="progress" class="l-full" max="100" value="70">75/100</progress>
       <div class="l-table l-bottom">
         <p class="l-form-input-title form-input-title">お名前</p>
         <div class="l-form-input-body">
@@ -64,8 +36,8 @@
       <div class="l-table l-bottom">
         <label class="l-form-input-title form-input-title" for="tel">電話番号</label>
         <div class="l-form-input-body">
-          <input class="l-full form-input" type="tel" id="tel" name="" placeholder="電話番号) 01201231234" required>
-          <label class="input-label" for="dynamic-label-input">電話番号) 01201231234</label>
+          <input class="l-full form-input" type="tel" id="tel" name="" placeholder="電話番号) 01201231234" pattern="0120123123" min="10" max="13" required>
+          <label class="form-label" for="dynamic-label-input">電話番号) 01201231234</label>
         </div>
       </div>
       <div class="l-table l-bottom">
