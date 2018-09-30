@@ -111,6 +111,7 @@ li {
   line-height: 1.2; }
 
 .l-table {
+  width: 100%;
   display: table; }
   .l-table > * {
     display: table-cell; }
@@ -131,9 +132,10 @@ li {
   width: 80%;
   position: relative;
   padding-top: 1.5rem; }
-
-.l-form-input-name {
-  width: 40%; }
+  .l-form-input-body .l-form-input-name {
+    width: 49%; }
+    .l-form-input-body .l-form-input-name:last-child {
+      margin-left: 1%; }
 
 .form .form-title {
   position: relative;
@@ -153,8 +155,10 @@ li {
     right: 0; }
 
 .form .form-input {
-  font-size: 1.3vw;
-  padding: 1%; }
+  font-size: 1.5vw;
+  padding: 1%;
+  box-sizing: border-box;
+  padding: 5px; }
   .form .form-input:placeholder-shown + .form-label {
     opacity: 0;
     transform: translateY(1rem); }
@@ -164,12 +168,15 @@ li {
     border: 1px solid red; }
 
 .form .form-label {
+  font-size: 14px;
   position: absolute;
-  top: 0;
+  top: 5px;
   left: 0;
   opacity: 1;
   transform: translateY(0);
   transition: all .2s ease-out; }
+  .form .form-label.secod-input {
+    left: 170px; }
 
 .text-title {
   position: relative;

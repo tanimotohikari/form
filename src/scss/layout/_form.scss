@@ -8,8 +8,12 @@
   width: 80%;
   position: relative;
   padding-top: 1.5rem;
-}
 
-.l-form-input-name {
-  width: 40%;
+  .l-form-input-name {
+    width: 49%;
+
+    &:last-child {
+      margin-left: 1%;
+    }
+  }
 }

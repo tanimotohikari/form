@@ -26,8 +26,10 @@
   }
 
   .form-input {
-    font-size: 1.3vw;
+    font-size: 1.5vw;
     padding: 1%;
+    box-sizing: border-box;
+    padding: 5px;
 
     &:placeholder-shown + .form-label {
       opacity: 0;
@@ -44,11 +46,16 @@
   }
 
   .form-label {
+    font-size: 14px;
     position: absolute;
-    top: 0;
+    top: 5px;
     left: 0;
     opacity: 1;
     transform: translateY(0);
     transition: all .2s ease-out;
+
+    &.secod-input {
+      left: 170px;
+    }
   }
 }

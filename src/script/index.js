@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-  var inputCheck = [false, false, false, false];
   var form = document.forms.mainForm;
   var lastName = document.getElementById('last-name');
   var firstName = document.getElementById('first-name');
@@ -9,24 +8,26 @@ document.addEventListener("DOMContentLoaded", function() {
   var email = document.getElementById('email');
   var date = document.getElementById('move-date');
   var progress = document.getElementById('progress');
+  var submit = document.getElementById('submit');
+  var progressValue;
+  var falseCount = 0, trueCount = 0;
+  var inputsNumber = (document.querySelectorAll('.require')).length;
 
-  //console.log(progress.value);
+  //ボタンを押せない設定にする
+  submit.disabled = true;
 
-  function pragressHandler(event) {
-    this.classList.remove('is-error');
-    this.classList.remove('is-success');
+  //プログレスバーの制御
+  function changePragressBar(event) {
     if (this.validity.valid) {
-      this.classList.add('is-success');
+      trueCount = trueCount + 1;
     } else {
-      this.classList.add('is-error');
+      falseCount = falseCount + 1;
     }
+    progressValue = (trueCount - falseCount) * (100 / inputsNumber);
+    progress.value = progressValue;
   }
 
-  //if(this.classList.contains('red') === true ){
-    //処理
-  //}
-
-
+  //入力チェックがOKの時にクラスを付け替え
   function validateHandler(event) {
     this.classList.remove('is-error');
     this.classList.remove('is-success');
@@ -62,24 +63,39 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
+  // //formのrequired項目のチェックしOKならボタンがアクティブになる
+  form.addEventListener('input', function(event) {
+    if(this.checkValidity()) {
+      submit.disabled = false;
+    } else {
+      submit.disabled = true;
+    }
+  });
+
   //名前の入力検証
   lastName.addEventListener('input', validateHandler);
+  lastName.addEventListener('blur', changePragressBar);
   lastName.addEventListener('blur', validateHandler);
   firstName.addEventListener('input', validateHandler);
+  firstName.addEventListener('blur', changePragressBar);
   firstName.addEventListener('blur', validateHandler);
 
   //名前のふりがなの入力検証
   lastNamePhonetic.addEventListener('input', validateHandler);
+  lastNamePhonetic.addEventListener('blur', changePragressBar);
   lastNamePhonetic.addEventListener('blur', validateHandler);
   firstNamePhonetic.addEventListener('input', validateHandler);
+  firstNamePhonetic.addEventListener('blur', changePragressBar);
   firstNamePhonetic.addEventListener('blur', validateHandler);
 
   //電話番号の入力検証
   tel.addEventListener('input', validateHandler);
+  tel.addEventListener('blur', changePragressBar);
   tel.addEventListener('blur', validateHandler);
 
   //メールアドレスの入力検証
   email.addEventListener('input', validateHandler);
+  email.addEventListener('blur', changePragressBar);
   email.addEventListener('blur', validateHandler);
 
 });

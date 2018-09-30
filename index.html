@@ -14,36 +14,33 @@
   <form class="form" action="" method="" name="mainForm">
     <fieldset>
       <legend class="l-bottom form-title">入力フォーム</legend>
-      <progress id="progress" class="l-full" max="100" value="70">75/100</progress>
+      <progress id="progress" class="l-full" max="100" value="0">50%</progress>
       <div class="l-table l-bottom">
-        <p class="l-form-input-title form-input-title">お名前</p>
         <div class="l-form-input-body">
-          <input class="l-form-input-name form-input" type="text" id="last-name" name="lastName" placeholder="お名前：姓) 引越し" required>
-          <label class="form-label" for="last-name">お名前：姓) 引越し</label>
-          <label for="first-name">名</label>
-          <input class="l-form-input-name form-input" type="text" id="first-name" name="firstName" placeholder="太郎" required>
+          <input class="l-form-input-name form-input require" type="text" id="last-name" name="lastName" placeholder="お名前：姓) 引越し" required>
+          <label class="form-label" for="last-name">お名前：姓）引越し</label>
+          <input class="l-form-input-name form-input require" type="text" id="first-name" name="firstName" placeholder="お名前：名) 太郎" required>
+          <label class="form-label secod-input" for="last-name">お名前：名）太郎</label>
         </div>
       </div>
       <div class="l-table l-bottom">
-        <p class="l-form-input-title form-input-title">ふりがな</p>
         <div class="l-form-input-body">
-          <label for="last-name-phonetic">姓</label>
-          <input class="l-form-input-name form-input" type="text" id="last-name-phonetic" name="" placeholder="ひっこし" required>
-          <label for="first-name-phonetic">名</label>
-          <input class="l-form-input-name form-input" type="text" id="first-name-phonetic" name="" placeholder="たろう" required>
+          <input class="l-form-input-name form-input require" type="text" id="last-name-phonetic" name="" placeholder="ふりがな：姓) ひっこし" required>
+          <label class="form-label" for="last-name-phonetic">ふりがな：姓）ひっこし</label>
+          <input class="l-form-input-name form-input require" type="text" id="first-name-phonetic" name="" placeholder="ふりがな：名) たろう" required>
+          <label class="form-label secod-input" for="first-name-phonetic">ふりがな：名）たろう</label>
         </div>
       </div>
       <div class="l-table l-bottom">
-        <label class="l-form-input-title form-input-title" for="tel">電話番号</label>
         <div class="l-form-input-body">
-          <input class="l-full form-input" type="tel" id="tel" name="" placeholder="電話番号) 01201231234" pattern="0120123123" min="10" max="13" required>
-          <label class="form-label" for="dynamic-label-input">電話番号) 01201231234</label>
+          <input class="l-full form-input require" type="tel" id="tel" name="" placeholder="電話番号) 01201231234" min="10" max="13" required>
+          <label class="form-label" for="dynamic-label-input">電話番号）01201231234</label>
         </div>
       </div>
       <div class="l-table l-bottom">
-        <label class="l-form-input-title form-input-title" for="email">メールアドレス</label>
         <div class="l-form-input-body">
-          <input class="l-full form-input" type="email" id="email" name="" placeholder="hogehoge@example.com" required>
+          <input class="l-full form-input require" type="email" id="email" name="" placeholder="メールアドレス）hogehoge@example.com" required>
+          <label class="form-label" for="email">メールアドレス）hogehoge@example.com</label>
         </div>
       </div>
       <div class="l-table l-bottom">
@@ -67,7 +64,7 @@
           <label for="marriage"><input id="marriage" type="radio" value="4" name="move-reason">結婚</label>
         </div>
       </div>
-      <button type="submit">データ送信</button>
+      <button id="submit" type="submit" disabled>データ送信</button>
     </fieldset>
   </form>
 </section>
